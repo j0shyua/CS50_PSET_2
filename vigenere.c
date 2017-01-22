@@ -13,12 +13,11 @@ int main (int argc, string argv[])
     
     if (argc == 2)
     {
-
         for (int i = 0; i < strlen (argv[1]); i++)
         {
             if (isalpha ((argv[1])[i]) == false)
             {
-                printf ("Error: Please enter plaintext as the encription key. %c\n", argv[1][i]);
+                printf ("Error: Please enter plaintext as the encryption key. %c\n", argv[1][i]);
                 return 1;
             }
         }
@@ -29,6 +28,7 @@ int main (int argc, string argv[])
         int letterPos;
         int key;
         int letterCount = 0;
+        
         for (int i = 0, n = strlen (userInput); i < n; i++)
         {
             if (isalpha (userInput[i]))
@@ -62,7 +62,6 @@ int main (int argc, string argv[])
                 printf ("%c", userInput[i]);
             }
         }
-        
         printf ("\n");
         return 0;
     }
